@@ -63,7 +63,7 @@
                                 <li class="nav-item">
                                     <a href="pages/layout/top-nav.html" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Golongan</p>
+                                        <p>Class</p>
                                     </a>
                                 </li>
                             </ul>
