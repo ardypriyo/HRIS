@@ -21,12 +21,12 @@
             return $this->db->get()->result();
         }
 
-        function loadDept($table)
+        function loadMaster($table)
         {
-            $this->db->select('departemen.*, karyawan.nama as nama_karyawan');
-            $this->db->from('departemen');
-            $this->db->join('karyawan', 'departemen.manager = karyawan.NIK', 'LEFT');
-            $this->db->where('departemen.status', '1');
+            $this->db->select($table.'.*, karyawan.nama as nama_karyawan');
+            $this->db->from($table);
+            $this->db->join('karyawan', $table.'.manager = karyawan.NIK', 'LEFT');
+            $this->db->where($table.'.status', '1');
             $this->db->order_by('kode', 'ASC');
 
             return $this->db->get()->result();

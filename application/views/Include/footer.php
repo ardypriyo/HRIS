@@ -67,6 +67,9 @@
 
             //Bootstrap Duallistbox
             $('.duallistbox').bootstrapDualListbox();
+
+            //tooltip
+            $('[data-tooltip="tooltip"]').tooltip()
         });
     </script>
 </body>

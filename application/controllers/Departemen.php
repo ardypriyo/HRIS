@@ -24,7 +24,7 @@
         function index()
         {
             $prefix = "DEPT-";
-            $getMaxNo = $this->M_master->getMaxNo('departemen');
+            $getMaxNo = $this->M_master->getMaxNo('dept');
             
             foreach($getMaxNo as $G)
             {
@@ -42,7 +42,7 @@
 
             $data['judul'] = 'Master Departmen';
             $data['noTransaksi'] = $kodeTransaksi;
-            $data['data'] = $this->M_master->loadDept('departemen');
+            $data['data'] = $this->M_master->loadMaster('dept');
             $this->load->view('Include/header', $data);
             $this->load->view('Include/sidebar');
             $this->load->view('Departemen/index', $data);
